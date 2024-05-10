@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, screen } = require('electron');
+const { app, BrowserWindow, ipcMain, screen, Menu } = require('electron');
 const url = require('url');
 const path = require('path');
 const fs = require('fs');
@@ -20,6 +20,7 @@ function createMainWindow() {
         },
     });
     mainWindow.maximize()
+    Menu.setApplicationMenu(null)
 
     // mainWindow.webContents.openDevTools();
 
